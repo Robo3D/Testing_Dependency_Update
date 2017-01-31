@@ -47,11 +47,11 @@ class Testing_dependency_updatePlugin(octoprint.plugin.SettingsPlugin,
 				# version check: github repository
 				type="github_release",
 				user="robo3d",
-				repo="Testing_dependency_update",
+				repo="testing_dependency_update",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/robo3d/Testing_dependency_update/archive/{target_version}.zip"
+				pip="https://github.com/robo3d/testing_dependency_update/archive/{target_version}.zip"
 			)
 		)
 

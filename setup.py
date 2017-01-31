@@ -1,29 +1,29 @@
 # coding=utf-8
 
-from setuptools import setup
-from setuptools.command.install import install
-from setuptools.command.develop import develop
-import sys
-
-class Install_Deps(object):
-    def install_deps(self):
-        import pip
-        r = pip.main(['install', 'https://github.com/Robo3D/OctoPrint-FirmwareUpdater/tarball/master#egg=octoprint_firmwareupdater-0.1.4', "https://github.com/Robo3D/Meta-Reader/tarball/master#egg=Meta_Reader-1.0.3"])
-        if r is not 0:
-            print("Could not install RoboLCD dependencies: Meta_Reader and/or OctoPrint_FirmwareUpdater")
-            sys.exit(-1)
-        else:
-            pass
-
-class Install_Deps(install, Install_Deps):
-    def run(self):
-        self.install_deps()
-        install.run(self)
-
-class Install_Deps_Dev(develop, Install_Deps):
-    def run(self):
-        self.install_deps()
-        develop.run(self)
+# from setuptools import setup
+# from setuptools.command.install import install
+# from setuptools.command.develop import develop
+# import sys
+#
+# class Install_Deps(object):
+#     def install_deps(self):
+#         import pip
+#         r = pip.main(['install', 'https://github.com/Robo3D/OctoPrint-FirmwareUpdater/tarball/master#egg=octoprint_firmwareupdater-0.1.4', "https://github.com/Robo3D/Meta-Reader/tarball/master#egg=Meta_Reader-1.0.3"])
+#         if r is not 0:
+#             print("Could not install RoboLCD dependencies: Meta_Reader and/or OctoPrint_FirmwareUpdater")
+#             sys.exit(-1)
+#         else:
+#             pass
+#
+# class Install_Deps(install, Install_Deps):
+#     def run(self):
+#         self.install_deps()
+#         install.run(self)
+#
+# class Install_Deps_Dev(develop, Install_Deps):
+#     def run(self):
+#         self.install_deps()
+#         develop.run(self)
 
 
 ########################################################################################################################
